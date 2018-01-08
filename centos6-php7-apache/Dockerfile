@@ -5,7 +5,7 @@ RUN rpm --import http://rpms.remirepo.net/RPM-GPG-KEY-remi && \
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm && \
     yum install -y http://rpms.remirepo.net/enterprise/remi-release-6.rpm && \
     yum install -y yum-utils && \
-    yum-config-manager --enable remi-php71 && \
+    yum-config-manager --enable remi-safe && \
     yum update -y && \
     yum install -y \
     php71-php.x86_64 \
