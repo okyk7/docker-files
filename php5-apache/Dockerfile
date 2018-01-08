@@ -5,37 +5,30 @@ RUN rpm -import http://rpms.remirepo.net/RPM-GPG-KEY-remi && \
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
     yum install -y yum-utils && \
-    yum-config-manager --enable remi-php71 && \
+    yum-config-manager --enable remi-php56 && \
     yum update -y && \
     yum install -y \
-    php71-php.x86_64 \
-    php71-php-bcmath.x86_64 \
-    php71-php-cli.x86_64 \
-    php71-php-common.x86_64 \
-    php71-php-devel.x86_64 \
-    php71-php-gd.x86_64 \
-    php71-php-intl.x86_64 \
-    php71-php-json.x86_64 \
-    php71-php-ldap.x86_64 \
-    php71-php-mbstring.x86_64 \
-    php71-php-mcrypt.x86_64 \
-    php71-php-mysqlnd.x86_64 \
-    php71-php-pdo.x86_64 \
-    php71-php-pear.noarch \
-    php71-php-xml.x86_64 \
-    php71-php-ast.x86_64 \
-    php71-php-opcache.x86_64 \
-    php71-php-pecl-zip.x86_64 \
-    php71-php-pecl-memcached.x86_64 \
-    php71-php-pdo.x86_64 \
-    php71-php-pgsql.x86_64 \
-    php71-php-pear.noarch \
-    php71-php-pecl-xdebug.x86_64 && \
-    ln -s /usr/bin/php71 /usr/bin/php && \
-    ln -s /etc/opt/remi/php71/php.ini /etc/php.ini && \
-    ln -s /etc/opt/remi/php71/php.d /etc/php.d && \
-    ln -s /etc/opt/remi/php71/pear.conf /etc/pear.conf && \
-    ln -s /etc/opt/remi/php71/pear /etc/pear
+    php.x86_64 \
+    php-bcmath.x86_64 \
+    php-cli.x86_64 \
+    php-common.x86_64 \
+    php-devel.x86_64 \
+    php-gd.x86_64 \
+    php-intl.x86_64 \
+    php-json.x86_64 \
+    php-ldap.x86_64 \
+    php-mbstring.x86_64 \
+    php-mcrypt.x86_64 \
+    php-mysqlnd.x86_64 \
+    php-pdo.x86_64 \
+    php-pgsql.x86_64 \
+    php-pear.noarch \
+    php-pecl-xdebug \
+    php-xml.x86_64 \
+    php-ast.x86_64 \
+    php-opcache.x86_64 \
+    php-pecl-zip.x86_64 \
+    php-pecl-memcached.x86_64
 
 RUN yum install -y httpd-devel.x86_64 wget git unzip vim rsync htop finger jq zip
 

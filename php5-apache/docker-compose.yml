@@ -1,0 +1,7 @@
+php5-apache:
+  image: php5-apache:latest
+  ports:
+    - "9980:80"
+  volumes:
+    - "/vagrant:/vagrant"
+  tty: true
