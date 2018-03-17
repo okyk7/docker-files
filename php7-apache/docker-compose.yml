@@ -8,3 +8,5 @@ php7-apache:
     - "/vagrant:/vagrant"
   tty: true
   stdin_open: true
+  environment:
+    COLUMNS: 237 # 何故か幅が狭いため

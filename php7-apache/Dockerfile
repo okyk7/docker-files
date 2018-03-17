@@ -70,3 +70,7 @@ RUN echo 'develop' | passwd develop --stdin
 WORKDIR /etc
 COPY vimrc .
 RUN echo "alias vi='vim'" >> /etc/bashrc
+
+# privileged用途
+# CMDはコンテナ起動時実行、RUNはイメージビルド時実行
+CMD /sbin/init
