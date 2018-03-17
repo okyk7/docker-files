@@ -1,5 +1,7 @@
 php7-apache:
   image: php7-apache:latest
+  container_name: php7-apache
+  hostname: docker-php7
   ports:
     - "9980:80"
   volumes:
