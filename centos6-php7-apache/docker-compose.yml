@@ -1,8 +1,0 @@
-centos6-php7-apache:
-  image: my/centos6-php7-apache:1.0
-  ports:
-    - "9980:80"
-  volumes:
-    - "/vagrant:/vagrant"
-  tty: true
-  stdin_open: true
