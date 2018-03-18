@@ -6,6 +6,7 @@ php7-apache:
     - "9980:80"
   volumes:
     - "/vagrant:/vagrant"
-    # - "/src:/src" ソースディレクトリ
+  # - "/src:/src" ソースディレクトリ
   tty: true
   stdin_open: true
+  privileged: true
