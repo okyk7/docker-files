@@ -1,0 +1,22 @@
+mysql:
+  image: mysql
+  container_name: mysql
+  volumes:
+    - /var/docker/mysql:/var/lib/mysql # /var/docker/mysqlを作っておく
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  container_name: phpmyadmin
+  environment:
+    - PMA_ARBITRARY=1
+    - PMA_HOST=mysql
+    - PMA_USER=root
+    - PMA_PASSWORD=root
+  links:
+    - mysql
+  ports:
+    - 8080:80
+  volumes:
+    - /var/docker/phpmyadmin:/sessions # /var/docker/phpmyadminを作っておく
