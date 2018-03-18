@@ -72,6 +72,7 @@ COPY vimrc .
 RUN echo "COLUMNS=237" >> /etc/bashrc
 RUN echo "export COLUMNS" >> /etc/bashrc
 RUN echo "alias vi='vim'" >> /etc/bashrc
+RUN echo "alias view='vim -R'" >> /etc/bashrc
 
 # privileged用途
 # CMDはコンテナ起動時実行、RUNはイメージビルド時実行
