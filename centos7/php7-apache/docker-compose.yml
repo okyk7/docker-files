@@ -6,7 +6,6 @@ php7-apache:
     - "9980:80"
   volumes:
     - "/vagrant:/vagrant"
+    # - "/src:/src" ソースディレクトリ
   tty: true
   stdin_open: true
-  environment:
-    COLUMNS: 237 # 何故か幅が狭いため
