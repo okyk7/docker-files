@@ -1,0 +1,12 @@
+centos7-minimum:
+  image: centos7-minimum
+  container_name: centos7-minimum
+  hostname: docker-centos7-minimum
+  ports:
+    - "9981:80"
+  volumes:
+    - "/vagrant:/vagrant"
+  # - "/src:/src" ソースディレクトリ
+  tty: true
+  stdin_open: true
+  privileged: true
