@@ -37,10 +37,6 @@ RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/lo
 # タイムゾーン系
 RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 RUN unlink /etc/localtime && ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-RUN rm -f /etc/rpm/macros.image-language-conf && \
-    sed -i '/^override_install_langs=/d' /etc/yum.conf && \
-    yum -y reinstall glibc-common && \
-    yum clean all
 ENV LANG="ja_JP.UTF-8" \
     LANGUAGE="ja_JP:ja" \
     LC_ALL="ja_JP.UTF-8"
@@ -64,6 +60,7 @@ WORKDIR /etc
 COPY vimrc .
 RUN echo "alias vi='vim'" >> /etc/bashrc
 RUN echo "alias view='vim -R'" >> /etc/bashrc
+WORKDIR /root
 
 # privileged用途
 # CMDはコンテナ起動時実行、RUNはイメージビルド時実行
