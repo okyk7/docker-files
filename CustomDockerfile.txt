@@ -1,0 +1,6 @@
+# golangインストール
+WORKDIR /usr/local/src
+RUN wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz # 最新版にする
+RUN tar -xzvf go1.10.3.linux-amd64.tar.gz
+RUN mv go /usr/local
+RUN echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
